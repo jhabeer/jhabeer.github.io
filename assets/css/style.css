@@ -215,7 +215,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--orange)}
   .work{grid-template-columns:repeat(3,1fr);column-gap:26px}
   .card.ph{grid-column:2/-1;align-self:stretch;margin-bottom:34px;display:flex}
   .card.ph .frame{flex:1;aspect-ratio:auto;min-height:200px}
-  .card:first-child{grid-row:1/3}
+  .work.ownwork .card:first-child{grid-row:1/3}
   .hero h1{font-size:min(22.5vw,23vh,300px)}
   .hero h1 .g{font-size:1.18em;line-height:.8;margin-top:-.04em}
   .about{grid-template-columns:.8fr 1.4fr;gap:80px;align-items:start}
@@ -240,3 +240,33 @@ footer a{text-decoration:none}footer a:hover{color:var(--orange)}
 @media (min-width:900px){.prow .p--txt{margin-top:14px}.svc .from.txt{max-width:190px}}
 .svc .from strong{text-transform:none}
 .svc .from .u{display:block;font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:14px;margin-top:6px;font-weight:500}
+
+/* work: sample + brand groups */
+.work-label{display:flex;flex-direction:column;gap:8px;margin:0 0 26px;padding-top:6px}
+.work-label .mono{color:var(--orange)}
+.work-label p{color:var(--grey-d);max-width:56ch;margin:0}
+.work+.work-label{margin-top:clamp(40px,6vw,72px)}
+.work.samples,.work.cvrow{row-gap:0}
+.card .frame .chip{position:absolute;left:12px;top:12px;background:var(--cream);color:var(--ink);padding:5px 9px;border-radius:3px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
+.cvtext{display:flex;flex-direction:column;justify-content:flex-start;gap:20px;padding:clamp(6px,5vw,90px) 0 34px}
+.cvtext h3{font-size:clamp(40px,6vw,72px);line-height:1;font-style:italic;font-weight:400;color:var(--cream);margin:0}
+.cvtext p{color:var(--grey-d);max-width:48ch;margin:0}
+.cvlinks{display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center}
+.cvlinks .tl{color:var(--cream);border-bottom:1px solid var(--orange);padding-bottom:3px}
+.cvlinks .tl:hover{color:var(--orange)}
+@media (min-width:640px){
+  .work.samples{grid-template-columns:repeat(3,1fr);column-gap:18px}
+  .work.samples .card .t{font-size:16px}
+  .work.samples .card figcaption{flex-direction:column;gap:4px}
+  .work.samples .card .s{font-size:13.5px}
+  .work.cvrow{grid-template-columns:1fr 2fr;column-gap:26px;align-items:stretch}
+  .work.cvrow .cvtext{padding-left:clamp(10px,4vw,60px)}
+}
+@media (min-width:900px){
+  .work.samples{column-gap:26px}
+  .work.samples .card .t{font-size:20px}
+  .work.samples .card figcaption{flex-direction:row;gap:16px}
+  .work.samples .card .s{font-size:15px}
+  .work.cvrow{grid-template-columns:repeat(3,1fr)}
+  .work.cvrow .cvtext{grid-column:2/-1}
+}
