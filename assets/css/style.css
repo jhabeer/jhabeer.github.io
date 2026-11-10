@@ -330,6 +330,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--orange)}
 .tl{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--orange);padding-bottom:3px}
 .tl:hover{color:var(--orange)}
 @media (min-width:900px){.watch-grid{grid-template-columns:1.7fr 1fr;gap:48px;align-items:center}}
+.watch-grid + .watch-grid{margin-top:clamp(40px,6vw,72px);padding-top:clamp(36px,5vw,56px);border-top:1px solid var(--rule-d)}
+.tips-feature .tip-list{margin-top:clamp(28px,4.5vw,48px)}
 
 /* videos grid in work */
 .vlabel{margin-top:clamp(40px,6vw,72px)}
