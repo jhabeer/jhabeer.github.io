@@ -25,6 +25,7 @@
   var d=document;
   function play(a){
     var id=a.getAttribute('data-yt'),st=a.getAttribute('data-start'),title=a.getAttribute('data-title')||'YouTube video';
+    if(!id||!/^[\w-]{11}$/.test(id))return;
     var f=d.createElement('iframe');
     f.src='https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1'+(st?'&start='+st:'');
     f.title=title;f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
